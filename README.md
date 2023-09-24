@@ -45,7 +45,9 @@ git clone https://github.com/msoni122/visualNoise.git
 cd visualNoise
 
 ### Set up a virtual enviroment as to not mess us the python and dependencies on your local ###
-python -m venv venv
+python -m venv venv 
+    ### Depending on how you have python setup, if the executable is pointing to python 2 or python 3, you may need to do python3 -m venv venv... you can check your python version with the command `python --version`
+    ### The command above worked fine on mac, but on windows wsl, ubuntu subsystem, I also needed to `sudo apt install python3.10-venv` first
 source venv/bin/activate
 
 ### Download dependencies and package ###
@@ -94,6 +96,7 @@ visualNoise
 ### Maintainabilty Going Forward
 - [ ] Use tox or similar package for better dependency managent
 - [ ] More testing coverage
+- [ ] Create Docker Image or similar so that onboarding users don't need to deal with dependencies or getting project up and running on their own
 
 ### Some Likely Features
 - [ ] Ability to upload a file and create corresponding visual noise loop
