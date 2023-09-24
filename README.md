@@ -33,7 +33,7 @@ Basic algothm to generate m-sequence:
 - I took the prompt as is... I did not have any information about future uses or features and didn't want to overengineer in terms of scalability or deployment needs
 
 ### Extra Libraries Used
-- PyQt5 and matplotlib to display the visual noise
+- [PyQt5](https://www.pythonguis.com/tutorials/pyqt-basic-widgets/) and matplotlib to display the visual noise
 - [Scipy](https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.max_len_seq.html) -- used the max_len_seq function to create the m-sequence arrays
 - Numpy -- numpy arrays created by scipy libraries and used in displaying noise
 
@@ -62,7 +62,6 @@ visualNoise
 |   .gitignore
 |   README.md
 |   requirements.txt
-|   M-Sequence.pdf
 |   setup.py
 └─── app
 |    |    __init.py__
