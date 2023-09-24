@@ -85,6 +85,7 @@ visualNoise
 ---
 ### Known Bugs
 - [ ] When the window first opens, it waits the interval to display anything other than the axises
+- [ ] In doing some extra testing, I tried running this on wsl ubuntu distro on Windows laptop -- I was had trouble getting the wsl to link to the proper pluggins needed for PyQT5 to work properly with the NVIDIA Graphics card
 
 ### Set Up Github and CI/CD
 - [ ] Create develop and main branches
