@@ -8,8 +8,8 @@ A program that takes some basic parameters ( length of M-sequence, image size in
 
 
 ### The Prompt
-![Prompt]()
-![Example Noise]()
+[Prompt]()
+[Example Noise]()
 
 ### Tell Me a little more about M-Sequences
 "Maximum Length Sequence," is a type of pseudorandom binary sequence. M-sequences are generated using Linear Feedback Shift Registers (LFSRs). 
@@ -38,15 +38,16 @@ Basic algothm to generate m-sequence:
 
 ### Extra Libraries Used
 - PyQt5 and matplotlib to display the visual noise
-- Scipy -- used the max_len_seq function to create the m-sequence arrays
+- [Scipy](https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.max_len_seq.html) -- used the max_len_seq function to create the m-sequence arrays
 - Numpy -- numpy arrays created by scipy libraries and used in displaying noise
 
 ## How to Run Application?!
 I'm assuming that along with a fresh install of Ubuntu, you have github already set up locally
 ```
-git clone <URL>
+git clone https://github.com/msoni122/visualNoise.git
 cd visualNoise
-pip install -e . -c visualNoise
+pip install -r requirements.txt
+pip install -e .
 visualNoise
 ```
 
