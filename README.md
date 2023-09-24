@@ -6,11 +6,6 @@ A program that takes some basic parameters ( length of M-sequence, image size in
 ![Param Input Window](https://github.com/msoni122/visualNoise/assets/36343747/cfcdbef1-1694-4db8-8a19-21b02d1144d0)
 ![Visual Noise Display Window](https://github.com/msoni122/visualNoise/assets/36343747/1c259302-dc47-4885-980c-9d6f02df7fe8)
 
-
-### The Prompt
-[Prompt]()
-[Example Noise]()
-
 ### Tell Me a little more about M-Sequences
 "Maximum Length Sequence," is a type of pseudorandom binary sequence. M-sequences are generated using Linear Feedback Shift Registers (LFSRs). 
 
@@ -32,6 +27,7 @@ Basic algothm to generate m-sequence:
 - We wouldn't want infinate noise running, so I capped the loop at 2 minutes
 - Rather than having active logging to a file, it would be okay to log all the frames to the file once the program was terminated
 - File names are fine as visualNoise_[date].json 
+- Timestamp is okay in local time rather needing to be in any specific typezone, such as UTC
 - We want the information in the file to be easily readable, ie.. json format, so that we can later create a feature to use the data easily
 - We don't want any extra noise around our noise [ noise being x, y axis, titles, timers, etc ]
 - I took the prompt as is... I did not have any information about future uses or features and didn't want to overengineer in terms of scalability or deployment needs
@@ -44,10 +40,19 @@ Basic algothm to generate m-sequence:
 ## How to Run Application?!
 I'm assuming that along with a fresh install of Ubuntu, you have github already set up locally
 ```
+### clone code and move directories ###
 git clone https://github.com/msoni122/visualNoise.git
 cd visualNoise
+
+### Set up a virtual enviroment as to not mess us the python and dependencies on your local ###
+python -m venv venv
+source venv/bin/activate
+
+### Download dependencies and package ###
 pip install -r requirements.txt
 pip install -e .
+
+### The setup should have created an executable, just run this command and the program should start ###
 visualNoise
 ```
 
@@ -67,7 +72,9 @@ visualNoise
 |    |    fileOutputLog.py
 |
 └───  tests
+|    |    __init__.py
 |    |    test_parameterValidations.py
+|    |    test_fileOutputLog.py
 └───  files
 |    |    visualNoise_{date}.json
 └─── venv
@@ -87,6 +94,7 @@ visualNoise
 
 ### Maintainabilty Going Forward
 - [ ] Use tox or similar package for better dependency managent
+- [ ] More testing coverage
 
 ### Some Likely Features
 - [ ] Ability to upload a file and create corresponding visual noise loop
